@@ -8,9 +8,9 @@
  * 
  */
 
-
 add_shortcode("valor_moeda", function($atts) {
     $moeda = $atts["moeda"];
+
     // Iniciando conexão com o link que queremos acessar, enviando os parâmetros (get ?)
     $ch = curl_init("http://economia.awesomeapi.com.br/json/last/$moeda-BRL");
                     
