@@ -1,6 +1,6 @@
 <?php 
 /**
- * Plugin Name: Cotação moedas - Dólar(USD) e Euro(EUR)
+ * Plugin Name: Cotação moedas - USD/EUR
  * Description: Plugin para obter o valor das cotações do Dólar e Euro
  * Version: 1.0.0
  * Author: Giovane Ferreira
@@ -25,3 +25,5 @@ add_shortcode("valor_moeda", function($atts) {
 });
 
 ?>
+
+
