@@ -19,16 +19,10 @@ add_shortcode("valor_moeda", function($atts) {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Ativamos para permitir receber os dados enviados pelo server
     $res_curl = curl_exec($ch); // Executamos a nossa conexão
     $resultado = json_decode($res_curl, true); // Convertendo a string JSON para Array
-    //var_dump($resultado);
     curl_close($ch); // Fechando a conexão
-    return $resultado["{$moeda}BRL"]["high"]; // Pegando o valor da chave high, que está dentro do array [USDBRL]
+    // Pegando o valor da chave high, que está dentro do array [USDBRL]
+    $num = $resultado["{$moeda}BRL"]["high"];
+    return substr($num, 0, 4); // retornando a string tratada
 });
-
-// acessar URL: https://economia.awesomeapi.com.br/json/last/USD-BRL 
-// var dump na variável resultado: NULL
-// apagar chave ["low"]: sai uma linha de erro
-// criar função de teste: funcionou
-// documentação: nada de específico
-// trocar URL: http -> https: deu certo 
 
 ?>
