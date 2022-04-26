@@ -7,7 +7,6 @@
  * Author URI: https://github.com/giovanef16-sys
  * 
  */
-
 add_shortcode("valor_moeda", function($atts) {
     $moeda = $atts["moeda"];
     // Iniciando conexão com o link que queremos acessar, enviando os parâmetros (get ?)
@@ -21,7 +20,7 @@ add_shortcode("valor_moeda", function($atts) {
     $resultado = json_decode($res_curl, true); // Convertendo a string JSON para Array
     curl_close($ch); // Fechando a conexão
     // Pegando o valor da chave high, que está dentro do array [USDBRL]
-    $num = $resultado["{$moeda}BRL"]["high"];
+    $num = $resultado["{$moeda}BRL"]["low"];
     return substr($num, 0, 4); // retornando a string tratada
 });
 
