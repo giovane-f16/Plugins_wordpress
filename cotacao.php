@@ -1,7 +1,7 @@
 <?php 
 /**
  * Plugin Name: Cotação moedas
- * Description: Plugin para obter o valor das cotações do Dólar e Euro
+ * Description: Plugin para obter o valor das cotações (Dólar, Euro e criptomoedas)
  * Version: 1.0.0
  * Author: Giovane Ferreira
  * Author URI: https://github.com/giovanef16-sys
